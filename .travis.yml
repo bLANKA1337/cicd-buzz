@@ -8,5 +8,6 @@ language: python
 script:
   - python -m pytest -v
 
-after_success:
-  - sh .travis/deploy_dockerhub.sh
+ after_success:
+   - sh .travis/deploy_dockerhub.sh
+   - test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy_heroku.sh
