@@ -1,6 +1,6 @@
 
 #!/bin/sh
-docker login -u $djklass@web.de -p $M!d$FdW2302
+docker login -u $DOCKER_USER -p $DOCKER_PASS
 if [ "$TRAVIS_BRANCH" = "master" ]; then
     TAG="latest"
 else
