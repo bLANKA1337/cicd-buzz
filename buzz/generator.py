@@ -1,23 +1,33 @@
 from __future__ import print_function
-import random
+from random import *
 
+
+text = ('Hallo User')
+zeichen = ('!', ".")
 buzz = ('monika', 'daniel', 'name')
-adjectives = ('complete', 'modern', 'self-service', 'integrated', 'end-to-end')
+adjectives = ('Hallo')
 adverbs = ('remarkably', 'enormously', 'substantially', 'significantly',
     'seriously')
 verbs = ('testabc', 'test123', 'testabababab', 'testaba23551', 'testaba666')
 
-def sample(l, n = 1):
-    result = random.sample(l, n)
-    if n == 1:
-        return result[0]
-    return result
+def satz():
+    random = randint(0, 1)
+    res = text + zeichen[random]
+    return res
 
-def generate_buzz():
-    buzz_terms = sample(buzz, 2)
-    phrase = ' '.join([sample(adjectives), buzz_terms[0], sample(adverbs),
-        sample(verbs), buzz_terms[1]])
-    return phrase.title()
+# def sample(l, n = 1):
+#     result = random.sample(l, n)
+#     if n == 1:
+#         return result[0]
+#     return result
+
+# def generate_buzz():
+#     buzz_terms = sample(buzz, 2)
+#     phrase = ' '.join([sample(adjectives), buzz_terms[0], sample(adverbs),
+#         sample(verbs), buzz_terms[1]])
+#     return phrase.title()
 
 if __name__ == "__main__":
-    print(generate_buzz())
+    #print(generate_buzz())
+    print(satz())
+    
